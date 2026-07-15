@@ -12,8 +12,8 @@ import java.time.LocalDateTime;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-    @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<ErrorResponse> handleResourceNotFoundException(ResourceNotFoundException ex, HttpServletRequest request){
+    @ExceptionHandler(SolarPanelNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleResourceNotFoundException(SolarPanelNotFoundException ex, HttpServletRequest request){
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.NOT_FOUND.value(),
                 "Not found",
