@@ -74,6 +74,16 @@
             <artifactId>spring-boot-starter-webmvc-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>1.6.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok-mapstruct-binding</artifactId>
+            <version>0.2.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -102,10 +112,27 @@
                         </goals>
                         <configuration>
                             <annotationProcessorPaths>
+
+                                <!-- MapStruct -->
+                                <path>
+                                    <groupId>org.mapstruct</groupId>
+                                    <artifactId>mapstruct-processor</artifactId>
+                                    <version>1.6.3</version>
+                                </path>
+
+                                <!-- Lombok -->
                                 <path>
                                     <groupId>org.projectlombok</groupId>
                                     <artifactId>lombok</artifactId>
                                 </path>
+
+                                <!-- Lombok + MapStruct Binding -->
+                                <path>
+                                    <groupId>org.projectlombok</groupId>
+                                    <artifactId>lombok-mapstruct-binding</artifactId>
+                                    <version>0.2.0</version>
+                                </path>
+
                             </annotationProcessorPaths>
                         </configuration>
                     </execution>

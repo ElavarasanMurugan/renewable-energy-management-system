@@ -23,7 +23,7 @@ public class SolarController {
     }
 
     @PostMapping
-    public Solar registerPanels(@Valid @RequestBody SolarRequestDto solarRequestDto){
+    public SolarResponseDto registerPanels(@Valid @RequestBody SolarRequestDto solarRequestDto){
         return solarService.registerPanels(solarRequestDto);
     }
 
@@ -33,12 +33,12 @@ public class SolarController {
     }
 
     @GetMapping("/{id}")
-    public Solar getPanelById(@PathVariable Long id){
-        return (Solar) solarService.getPanelById(id);
+    public SolarResponseDto getPanelById(@PathVariable Long id){
+        return (SolarResponseDto) solarService.getPanelById(id);
     }
 
     @PutMapping("/{id}")
-    public Solar updatePanel(@PathVariable Long id,@Valid @RequestBody SolarRequestDto solarRequestDto){
+    public SolarResponseDto updatePanel(@PathVariable Long id,@Valid @RequestBody SolarRequestDto solarRequestDto){
         return solarService.updatePanel(id,solarRequestDto);
     }
 

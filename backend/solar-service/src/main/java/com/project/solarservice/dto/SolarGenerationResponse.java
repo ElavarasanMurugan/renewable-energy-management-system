@@ -10,5 +10,5 @@ public class SolarGenerationResponse {
     private Long panelId;
     private String panel_name;
     private Double generated_units;
-    private LocalDateTime generatedAt;
+    private LocalDateTime generated_at;
 }
