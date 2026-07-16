@@ -1,5 +1,7 @@
 package com.project.windservice.controller;
 
+import com.project.windservice.dto.WindGenerationRequest;
+import com.project.windservice.dto.WindGenerationResponse;
 import com.project.windservice.dto.WindTurbineRequest;
 import com.project.windservice.dto.WindTurbineResponse;
 import com.project.windservice.service.WindTurbineService;
@@ -45,5 +47,20 @@ public class WindTurbineController {
     @DeleteMapping
     public String deleteAllTurbines(){
         return windTurbineService.deleteAllTurbines();
+    }
+
+    @PostMapping("/{turbineId}/generation")
+    public WindGenerationResponse recordGeneration(@PathVariable Long turbineId, @Valid @RequestBody WindGenerationRequest request){
+        return windTurbineService.recordGeneration(turbineId,request);
+    }
+
+    @GetMapping("/generation")
+    public List<WindGenerationResponse> getAllGeneration(){
+        return windTurbineService.getAllGeneration();
+    }
+
+    @GetMapping("/{turbineId}/generation")
+    public List<WindGenerationResponse> getGenerationByTurbine(@PathVariable Long turbineId){
+        return windTurbineService.getGenerationByTurbine(turbineId);
     }
 }
