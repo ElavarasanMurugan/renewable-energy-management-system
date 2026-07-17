@@ -9,6 +9,7 @@ import com.project.solarservice.repository.SolarHistoryRepository;
 import com.project.solarservice.repository.SolarRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -105,5 +106,44 @@ public class SolarService {
         }
         return faults;
     }
+
+    public ReportResponse getDailyReport(LocalDate date){
+        List<SolarGenerationEntity> history = solarHistoryRepository.findAll();
+        double total = history.stream()
+                .filter(h -> h.getGenerated_at().toLocalDate().equals(date))
+                .mapToDouble(SolarGenerationEntity::getGenerated_units)
+                .sum();
+        ReportResponse response = new ReportResponse();
+        response.setDate(date);
+        response.setTotalGeneratedUnits(total);
+
+        return response;
+    }
+    public ReportResponse getDailyReportsById(Long id, LocalDate date){
+        List<SolarGenerationEntity> histories = solarHistoryRepository.findBySolarId(id);
+        double total = histories.stream()
+                .filter( h-> h.getGenerated_at().toLocalDate().equals(date))
+                .mapToDouble(SolarGenerationEntity :: getGenerated_units)
+                .sum();
+
+        ReportResponse response = new ReportResponse();
+        response.setDate(date);
+        response.setTotalGeneratedUnits(total);
+        response.setSolarId(id);
+        return response;
+    }
+
+    public ReportResponse getAllReportsById(Long id){
+        List<SolarGenerationEntity> histories = solarHistoryRepository.findBySolarId(id);
+        double total = histories.stream()
+                .mapToDouble(SolarGenerationEntity::getGenerated_units)
+                .sum();
+
+        ReportResponse response = new ReportResponse();
+        response.setTotalGeneratedUnits(total);
+        response.setSolarId(id);
+        return response;
+    }
+
 
 }
