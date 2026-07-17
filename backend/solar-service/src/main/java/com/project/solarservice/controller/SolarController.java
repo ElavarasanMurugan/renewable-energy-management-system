@@ -2,11 +2,11 @@ package com.project.solarservice.controller;
 
 import com.project.solarservice.dto.*;
 import com.project.solarservice.entity.Solar;
-import com.project.solarservice.entity.SolarGenerationEntity;
 import com.project.solarservice.service.SolarService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -64,4 +64,18 @@ public class SolarController {
         return solarService.getAllFaults();
     }
 
+    @GetMapping("/reports")
+    public ReportResponse getDailyReport(@RequestParam LocalDate date){
+        return solarService.getDailyReport(date);
+    }
+
+    @GetMapping("/{solarId}/reports")
+    public ReportResponse getDailyReportsById(@PathVariable Long solarId, @RequestParam LocalDate date){
+        return solarService.getDailyReportsById(solarId,date);
+    }
+
+    @GetMapping("{solarId}/reports/all")
+    public ReportResponse getAllReportsById(@PathVariable Long solarId){
+        return solarService.getAllReportsById(solarId);
+    }
 }
