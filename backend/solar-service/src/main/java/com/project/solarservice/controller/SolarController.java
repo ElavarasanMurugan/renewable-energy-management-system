@@ -1,9 +1,6 @@
 package com.project.solarservice.controller;
 
-import com.project.solarservice.dto.SolarGenerationRequestDto;
-import com.project.solarservice.dto.SolarGenerationResponse;
-import com.project.solarservice.dto.SolarRequestDto;
-import com.project.solarservice.dto.SolarResponseDto;
+import com.project.solarservice.dto.*;
 import com.project.solarservice.entity.Solar;
 import com.project.solarservice.entity.SolarGenerationEntity;
 import com.project.solarservice.service.SolarService;
@@ -61,4 +58,10 @@ public class SolarController {
     public List<SolarGenerationResponse> getGenerationsById(@PathVariable Long panelId){
         return solarService.getGenerationsById(panelId);
     }
+
+    @GetMapping("/faults")
+    public List<FaultResponse> getAllFaults(){
+        return solarService.getAllFaults();
+    }
+
 }

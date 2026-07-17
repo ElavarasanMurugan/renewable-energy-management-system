@@ -4,8 +4,12 @@ import com.project.solarservice.dto.SolarRequestDto;
 import com.project.solarservice.entity.Solar;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
+import org.mapstruct.NullValuePropertyMappingStrategy;
 
-@Mapper(componentModel = "spring")
+@Mapper(
+        componentModel = "spring",
+        nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE
+)
 public interface SolarDtoEntity {
     Solar dtoToSolar(SolarRequestDto solarRequestDto);
     void updateSolarFromDto(SolarRequestDto solarRequestDto, @MappingTarget Solar solar);

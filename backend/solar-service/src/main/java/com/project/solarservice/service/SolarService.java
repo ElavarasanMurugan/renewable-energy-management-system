@@ -1,16 +1,10 @@
 package com.project.solarservice.service;
 
-import com.project.solarservice.dto.SolarGenerationRequestDto;
-import com.project.solarservice.dto.SolarGenerationResponse;
-import com.project.solarservice.dto.SolarRequestDto;
-import com.project.solarservice.dto.SolarResponseDto;
+import com.project.solarservice.dto.*;
 import com.project.solarservice.entity.Solar;
 import com.project.solarservice.entity.SolarGenerationEntity;
 import com.project.solarservice.exception.SolarPanelNotFoundException;
-import com.project.solarservice.mapper.GenerationEntityFromDto;
-import com.project.solarservice.mapper.GenerationResponse;
-import com.project.solarservice.mapper.SolarDtoEntity;
-import com.project.solarservice.mapper.SolarEntityDto;
+import com.project.solarservice.mapper.*;
 import com.project.solarservice.repository.SolarHistoryRepository;
 import com.project.solarservice.repository.SolarRepository;
 import org.springframework.stereotype.Service;
@@ -34,13 +28,15 @@ public class SolarService {
 
     private final GenerationResponse generationResponseMapper;
 
-    public SolarService(SolarRepository solarRepository, SolarHistoryRepository solarHistoryRepository, SolarDtoEntity dtoToEntitymapper, SolarEntityDto entityDtoMapper, GenerationEntityFromDto entityFromDtoMapper, GenerationResponse generationResponseMapper) {
+    private final SolarToFaultResponse entityToFault;
+    public SolarService(SolarRepository solarRepository, SolarHistoryRepository solarHistoryRepository, SolarDtoEntity dtoToEntitymapper, SolarEntityDto entityDtoMapper, GenerationEntityFromDto entityFromDtoMapper, GenerationResponse generationResponseMapper, SolarToFaultResponse entityToFault) {
         this.solarRepository = solarRepository;
         this.solarHistoryRepository = solarHistoryRepository;
         this.dtoToEntitymapper = dtoToEntitymapper;
         this.entityDtoMapper = entityDtoMapper;
         this.entityFromDtoMapper = entityFromDtoMapper;
         this.generationResponseMapper = generationResponseMapper;
+        this.entityToFault = entityToFault;
     }
 
     public SolarResponseDto registerPanels(SolarRequestDto solarRequestDto){
@@ -94,4 +90,20 @@ public class SolarService {
         List<SolarGenerationEntity> generationEntities = solarHistoryRepository.findBySolarId(panelId);
         return generationResponseMapper.GenrationRequestToResponseAll(generationEntities);
     }
+
+    public List<FaultResponse> getAllFaults(){
+        List<Solar> solars = solarRepository.findAll();
+        List<FaultResponse> faults = new ArrayList<>();
+
+        for(Solar solar : solars){
+            if(solar.getStatus().equalsIgnoreCase("ACTIVE") && solar.getCurrent_generation() == 0) {
+                FaultResponse response = entityToFault.toFaultResponse(solar);
+                response.setFault(true);
+                response.setMessage("Fault alert!. Zero output during active hours");
+                faults.add(response);
+            }
+        }
+        return faults;
+    }
+
 }
