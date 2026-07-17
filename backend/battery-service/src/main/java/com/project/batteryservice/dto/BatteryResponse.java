@@ -10,4 +10,5 @@ public class BatteryResponse {
     private Double capacity;
     private String location;
     private String status;
+    private Double currentCharge;
 }

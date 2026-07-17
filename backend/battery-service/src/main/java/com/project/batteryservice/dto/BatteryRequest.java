@@ -14,6 +14,10 @@ public class BatteryRequest {
     @Positive(message = "Capacity must be positive")
     private Double capacity;
 
+    @NotNull(message = "CurrentCharge is required")
+    @PositiveOrZero(message = "Current must be positive or zero")
+    private Double currentCharge;
+
     @NotBlank(message = "Location is required")
     private String location;
 

@@ -18,6 +18,7 @@ public class Battery {
     private String batteryName;
     private Double capacity;
     private String location;
+    private Double currentCharge;
     private String status;
 
     @Column(name = "created_at",nullable = false)

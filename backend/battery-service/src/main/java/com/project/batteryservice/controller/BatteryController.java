@@ -1,7 +1,7 @@
 package com.project.batteryservice.controller;
 
-import com.project.batteryservice.dto.BatteryRequest;
-import com.project.batteryservice.dto.BatteryResponse;
+import com.project.batteryservice.dto.*;
+import com.project.batteryservice.entity.BatteryHistory;
 import com.project.batteryservice.service.BatteryService;
 import jakarta.validation.Valid;
 
@@ -46,5 +46,25 @@ public class BatteryController {
     @DeleteMapping("/{id}")
     public String deleteBattery(@PathVariable Long id){
         return batteryService.deleteBattery(id);
+    }
+
+    @PostMapping("/{id}/charge")
+    public HistoryResponse chargeBattery(@PathVariable Long id, @Valid @RequestBody HistoryRequest request){
+        return batteryService.chargeBattery(id,request);
+    }
+
+    @PostMapping("/{id}/discharge")
+    public HistoryResponse dischargeBattery(@PathVariable Long id,@Valid @RequestBody HistoryRequest request){
+        return batteryService.dischargeBattery(id,request);
+    }
+
+    @GetMapping("/{id}/percentage")
+    public PercentageResponse getPercentage(@PathVariable Long id){
+        return batteryService.getPercentage(id);
+    }
+
+    @GetMapping("/{id}/status")
+    public BatteryStatusResponse getStatus(@PathVariable Long id){
+        return batteryService.getStatus(id);
     }
 }
