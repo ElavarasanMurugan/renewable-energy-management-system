@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-07-15T22:35:38+0530",
+    date = "2026-07-17T22:34:08+0530",
     comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.11 (Ubuntu)"
 )
 @Component
@@ -37,11 +37,23 @@ public class SolarDtoEntityImpl implements SolarDtoEntity {
             return;
         }
 
-        solar.setId( solarRequestDto.getId() );
-        solar.setPanel_name( solarRequestDto.getPanel_name() );
-        solar.setLocation( solarRequestDto.getLocation() );
-        solar.setCapacity_kw( solarRequestDto.getCapacity_kw() );
-        solar.setCurrent_generation( solarRequestDto.getCurrent_generation() );
-        solar.setStatus( solarRequestDto.getStatus() );
+        if ( solarRequestDto.getId() != null ) {
+            solar.setId( solarRequestDto.getId() );
+        }
+        if ( solarRequestDto.getPanel_name() != null ) {
+            solar.setPanel_name( solarRequestDto.getPanel_name() );
+        }
+        if ( solarRequestDto.getLocation() != null ) {
+            solar.setLocation( solarRequestDto.getLocation() );
+        }
+        if ( solarRequestDto.getCapacity_kw() != null ) {
+            solar.setCapacity_kw( solarRequestDto.getCapacity_kw() );
+        }
+        if ( solarRequestDto.getCurrent_generation() != null ) {
+            solar.setCurrent_generation( solarRequestDto.getCurrent_generation() );
+        }
+        if ( solarRequestDto.getStatus() != null ) {
+            solar.setStatus( solarRequestDto.getStatus() );
+        }
     }
 }
