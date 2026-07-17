@@ -1,9 +1,6 @@
 package com.project.windservice.controller;
 
-import com.project.windservice.dto.WindGenerationRequest;
-import com.project.windservice.dto.WindGenerationResponse;
-import com.project.windservice.dto.WindTurbineRequest;
-import com.project.windservice.dto.WindTurbineResponse;
+import com.project.windservice.dto.*;
 import com.project.windservice.service.WindTurbineService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
@@ -62,5 +59,10 @@ public class WindTurbineController {
     @GetMapping("/{turbineId}/generation")
     public List<WindGenerationResponse> getGenerationByTurbine(@PathVariable Long turbineId){
         return windTurbineService.getGenerationByTurbine(turbineId);
+    }
+
+    @GetMapping("/faults")
+    public List<FaultResponse> getAllFaults(){
+        return windTurbineService.getAllFaults();
     }
 }

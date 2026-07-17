@@ -1,22 +1,17 @@
 package com.project.windservice.service;
 
-import com.project.windservice.dto.WindGenerationRequest;
-import com.project.windservice.dto.WindGenerationResponse;
-import com.project.windservice.dto.WindTurbineRequest;
-import com.project.windservice.dto.WindTurbineResponse;
+import com.project.windservice.dto.*;
 import com.project.windservice.entity.WindGenerationHistory;
 import com.project.windservice.entity.WindTurbine;
 import com.project.windservice.exception.CurrentGenerationException;
 import com.project.windservice.exception.WindTurbineNotFoundException;
-import com.project.windservice.mapper.GenerationEntityToResponse;
-import com.project.windservice.mapper.GenerationRequestToEntity;
-import com.project.windservice.mapper.WindEntityToResponse;
-import com.project.windservice.mapper.WindRequestToEntity;
+import com.project.windservice.mapper.*;
 import com.project.windservice.repository.WindGenerationRepository;
 import com.project.windservice.repository.WindTurbineRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -27,14 +22,16 @@ public class WindTurbineService {
     private final WindEntityToResponse responseMapper;
     private final GenerationRequestToEntity generationRequestToEntity;
     private final GenerationEntityToResponse generationEntityToResponse;
+    private final WindToFaultResponse entityToFault;
 
-    public WindTurbineService(WindTurbineRepository windTurbineRepository, WindGenerationRepository windGenerationRepository, WindRequestToEntity entityMapper, WindEntityToResponse responseMapper, GenerationRequestToEntity generationRequestToEntity, GenerationEntityToResponse generationEntityToResponse) {
+    public WindTurbineService(WindTurbineRepository windTurbineRepository, WindGenerationRepository windGenerationRepository, WindRequestToEntity entityMapper, WindEntityToResponse responseMapper, GenerationRequestToEntity generationRequestToEntity, GenerationEntityToResponse generationEntityToResponse, WindToFaultResponse entityToFault) {
         this.windTurbineRepository = windTurbineRepository;
         this.windGenerationRepository = windGenerationRepository;
         this.entityMapper = entityMapper;
         this.responseMapper = responseMapper;
         this.generationRequestToEntity = generationRequestToEntity;
         this.generationEntityToResponse = generationEntityToResponse;
+        this.entityToFault = entityToFault;
     }
 
     public WindTurbineResponse registerTurbine(WindTurbineRequest request){
@@ -103,5 +100,20 @@ public class WindTurbineService {
         List<WindGenerationHistory> histories = windGenerationRepository.findByWindTurbineId(turbineId);
 
         return generationEntityToResponse.toListGeneration(histories);
+    }
+
+    public List<FaultResponse> getAllFaults(){
+        List<WindTurbine> windTurbines = windTurbineRepository.findAll();
+        List<FaultResponse> faults = new ArrayList<>();
+
+        for(WindTurbine windTurbine : windTurbines){
+            if(windTurbine.getStatus().equalsIgnoreCase("ACTIVE") && windTurbine.getCurrentGeneration() == 0) {
+                FaultResponse response = entityToFault.toFaultResponse(windTurbine);
+                response.setFault(true);
+                response.setMessage("Fault alert!. Zero output during active hours");
+                faults.add(response);
+            }
+        }
+        return faults;
     }
 }
