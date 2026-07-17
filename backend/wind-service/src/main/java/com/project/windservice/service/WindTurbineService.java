@@ -117,4 +117,44 @@ public class WindTurbineService {
         }
         return faults;
     }
+    public ReportResponse getDailyReports(LocalDate date){
+        List<WindGenerationHistory> histories = windGenerationRepository.findAll();
+        double total = histories.stream()
+                .filter( h-> h.getGeneratedAt().toLocalDate().equals(date))
+                .mapToDouble(WindGenerationHistory :: getGeneratedPower)
+                .sum();
+
+        ReportResponse response = new ReportResponse();
+        response.setDate(date);
+        response.setTotalGeneratedPower(total);
+
+        return response;
+    }
+
+    public ReportResponse getDailyReportsById(Long id, LocalDate date){
+        List<WindGenerationHistory> histories = windGenerationRepository.findByWindTurbineId(id);
+        double total = histories.stream()
+                .filter( h-> h.getGeneratedAt().toLocalDate().equals(date))
+                .mapToDouble(WindGenerationHistory :: getGeneratedPower)
+                .sum();
+
+        ReportResponse response = new ReportResponse();
+        response.setDate(date);
+        response.setTotalGeneratedPower(total);
+        response.setTurbineId(id);
+        return response;
+    }
+
+    public ReportResponse getAllReportsById(Long id){
+        List<WindGenerationHistory> histories = windGenerationRepository.findByWindTurbineId(id);
+        double total = histories.stream()
+                .mapToDouble(WindGenerationHistory::getGeneratedPower)
+                .sum();
+
+        ReportResponse response = new ReportResponse();
+        response.setTotalGeneratedPower(total);
+        response.setTurbineId(id);
+        return response;
+    }
+
 }

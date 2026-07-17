@@ -66,4 +66,20 @@ public class WindTurbineController {
     public List<FaultResponse> getAllFaults(){
         return windTurbineService.getAllFaults();
     }
+
+    @GetMapping("/reports")
+    public ReportResponse getDailyReports(@RequestParam LocalDate date){
+        return windTurbineService.getDailyReports(date);
+    }
+
+    @GetMapping("/{turbineId}/reports")
+    public ReportResponse getDailyReportsById(@PathVariable Long turbineId,@RequestParam LocalDate date){
+        return windTurbineService.getDailyReportsById(turbineId,date);
+    }
+
+    @GetMapping("{turbineId}/reports/all")
+    public ReportResponse getAllReportsById(@PathVariable Long turbineId){
+        return windTurbineService.getAllReportsById(turbineId);
+    }
+
 }
