@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-07-16T23:33:13+0530",
-    comments = "version: 1.6.3, compiler: Eclipse JDT (IDE) 3.46.100.v20260624-0231, environment: Java 21.0.11 (Eclipse Adoptium)"
+    date = "2026-07-18T21:56:21+0530",
+    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.11 (Ubuntu)"
 )
 @Component
 public class BatteryRequestToEntityImpl implements BatteryRequestToEntity {
@@ -24,6 +24,7 @@ public class BatteryRequestToEntityImpl implements BatteryRequestToEntity {
         battery.setBatteryName( request.getBatteryName() );
         battery.setCapacity( request.getCapacity() );
         battery.setLocation( request.getLocation() );
+        battery.setCurrentCharge( request.getCurrentCharge() );
         battery.setStatus( request.getStatus() );
 
         return battery;
@@ -38,6 +39,7 @@ public class BatteryRequestToEntityImpl implements BatteryRequestToEntity {
         battery.setBatteryName( request.getBatteryName() );
         battery.setCapacity( request.getCapacity() );
         battery.setLocation( request.getLocation() );
+        battery.setCurrentCharge( request.getCurrentCharge() );
         battery.setStatus( request.getStatus() );
     }
 }

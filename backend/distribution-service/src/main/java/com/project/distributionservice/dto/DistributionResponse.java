@@ -6,7 +6,6 @@ import java.time.LocalDateTime;
 @Data
 public class DistributionResponse {
     private Long id;
-
     private Double requiredUnits;
     private Double renewableUnits;
     private Double batteryUsed;

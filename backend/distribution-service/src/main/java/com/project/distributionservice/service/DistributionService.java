@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Service
 public class DistributionService {
@@ -49,7 +50,7 @@ public class DistributionService {
 
         WindTurbineResponse[] windTurbines = windTurbineResponse.getBody();
         if (windTurbines == null) {
-            throw new DistributionException("Unable to fetch solar panel data.");
+            throw new DistributionException("Unable to fetch wind turrbine data.");
         }
         double windUnits =
                 Arrays.stream(windTurbines)
@@ -64,19 +65,19 @@ public class DistributionService {
 
         if (renewable >= request.getRequiredUnits()) {
 
-            ResponseEntity<HistoryResponse[]> batteryResponse =
+            ResponseEntity<BatteryResponse[]> batteryResponse =
                     restTemplate.getForEntity(
                             "http://localhost:8080/api/v1/batteries",
-                            HistoryResponse[].class);
+                            BatteryResponse[].class);
 
-            HistoryResponse[] batteries = batteryResponse.getBody();
+            BatteryResponse[] batteries = batteryResponse.getBody();
 
             double excess = renewable - request.getRequiredUnits();
             double stored = 0;
 
             if (batteries != null) {
 
-                for (HistoryResponse battery : batteries) {
+                for (BatteryResponse battery : batteries) {
 
                     if (!battery.getStatus().equalsIgnoreCase("ACTIVE")) {
                         continue;
@@ -96,7 +97,7 @@ public class DistributionService {
 
                     restTemplate.postForObject(
                             "http://localhost:8080/api/v1/batteries/"
-                                    + battery.getBatteryId()
+                                    + battery.getId()
                                     + "/charge",
                             charge,
                             HistoryResponse.class
@@ -124,21 +125,22 @@ public class DistributionService {
 
             return entityToResponse.toResponse(history);
         }
+
         else {
 
-            ResponseEntity<HistoryResponse[]> batteryResponse =
+            ResponseEntity<BatteryResponse[]> batteryResponse =
                     restTemplate.getForEntity(
                             "http://localhost:8080/api/v1/batteries",
-                            HistoryResponse[].class);
+                            BatteryResponse[].class);
 
-            HistoryResponse[] batteries = batteryResponse.getBody();
+            BatteryResponse[] batteries = batteryResponse.getBody();
 
             double requiredFromBattery = request.getRequiredUnits() - renewable;
             double batteryUsed = 0;
 
             if (batteries != null) {
 
-                for (HistoryResponse battery : batteries) {
+                for (BatteryResponse battery : batteries) {
 
                     if (!battery.getStatus().equalsIgnoreCase("ACTIVE")) {
                         continue;
@@ -156,7 +158,7 @@ public class DistributionService {
 
                     restTemplate.postForObject(
                             "http://localhost:8080/api/v1/batteries/"
-                                    + battery.getBatteryId()
+                                    + battery.getId()
                                     + "/discharge",
                             discharge,
                             HistoryResponse.class
@@ -184,5 +186,15 @@ public class DistributionService {
 
             return entityToResponse.toResponse(history);
         }
+    }
+
+    public List<DistributionResponse> getAllDistributions(){
+        List<DistributionHistory> histories = distributionRepository.findAll();
+        return entityToResponse.toListResponse(histories);
+    }
+
+    public DistributionResponse getDistributionById(Long id){
+        DistributionHistory history = distributionRepository.findById(id).orElseThrow( () -> new DistributionException("The requested distribution not found"));
+        return entityToResponse.toResponse(history);
     }
 }

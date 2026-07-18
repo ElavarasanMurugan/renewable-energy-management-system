@@ -5,7 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccc66e44-f512-472f-9bda-7643b970f698" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/dto/BatteryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/BatteryServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/BatteryServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/controller/BatteryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/controller/BatteryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/dto/BatteryRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/dto/BatteryRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/dto/BatteryResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/dto/BatteryResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/dto/ErrorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/dto/ErrorResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/entity/Battery.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/entity/Battery.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/exception/BatteryNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/exception/BatteryNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/mapper/BatteryEntityToResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/mapper/BatteryEntityToResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/mapper/BatteryEntityToResponseImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/mapper/BatteryEntityToResponseImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/mapper/BatteryRequestToEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/mapper/BatteryRequestToEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/mapper/BatteryRequestToEntityImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/mapper/BatteryRequestToEntityImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/repository/BatteryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/repository/BatteryRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/service/BatteryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/classes/com/project/batteryservice/service/BatteryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/generated-sources/annotations/com/project/batteryservice/mapper/BatteryEntityToResponseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/generated-sources/annotations/com/project/batteryservice/mapper/BatteryEntityToResponseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/generated-sources/annotations/com/project/batteryservice/mapper/BatteryRequestToEntityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/generated-sources/annotations/com/project/batteryservice/mapper/BatteryRequestToEntityImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/controller/DistributionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/controller/DistributionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/dto/DistributionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/dto/DistributionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/dto/HistoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/dto/HistoryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/entity/DistributionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/entity/DistributionHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/mapper/DistributionEntityToResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/mapper/DistributionEntityToResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/mapper/DistributionRequestToEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/mapper/DistributionRequestToEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/service/DistributionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/src/main/java/com/project/distributionservice/service/DistributionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/GenerationEntityFromDtoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/GenerationEntityFromDtoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/GenerationResponseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/GenerationResponseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/SolarDtoEntityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/SolarDtoEntityImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/SolarEntityDtoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/SolarEntityDtoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/SolarToFaultResponseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/SolarToFaultResponseImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/windservice/controller/WindTurbineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/windservice/controller/WindTurbineController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/windservice/service/WindTurbineService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/windservice/service/WindTurbineService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,21 +80,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.WindServiceApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/elavarasan/Downloads/Java-Files/Basics",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.WindServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;distribution-service&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/elavarasan/Downloads/Java-Files/Basics&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="WindServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
