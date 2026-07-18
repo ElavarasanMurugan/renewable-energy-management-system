@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccc66e44-f512-472f-9bda-7643b970f698" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../solar-service/src/main/java/com/project/solarservice/dto/ReportResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/windservice/dto/ReportResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solar-service/src/main/java/com/project/solarservice/controller/SolarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/src/main/java/com/project/solarservice/controller/SolarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../solar-service/src/main/java/com/project/solarservice/service/SolarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/src/main/java/com/project/solarservice/service/SolarService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/windservice/controller/WindTurbineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/windservice/controller/WindTurbineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/windservice/service/WindTurbineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/windservice/service/WindTurbineService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,9 +56,9 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.WindServiceApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "solar-panel-service",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/elavarasan/Documents/Capstone-Project/renewable-energy-management-system/backend/wind-service",
+    "last_opened_file_path": "/home/elavarasan/Downloads/Java-Files/Basics",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>

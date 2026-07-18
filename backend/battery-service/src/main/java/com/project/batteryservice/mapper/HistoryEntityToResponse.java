@@ -12,5 +12,6 @@ public interface HistoryEntityToResponse {
     @Mapping(source = "battery.batteryName",target = "batteryName")
     @Mapping(source = "battery.capacity",target = "capacity")
     @Mapping(source = "battery.currentCharge",target = "currentCharge")
+    @Mapping(source = "battery.status",target = "status")
     HistoryResponse toHistoryResponse(BatteryHistory history);
 }
