@@ -12,6 +12,6 @@ public class HistoryResponse {
     private Double capacity;
     private Double currentCharge;
     private Double units;
-
+    private String status;
     private String alertMessage;
 }
