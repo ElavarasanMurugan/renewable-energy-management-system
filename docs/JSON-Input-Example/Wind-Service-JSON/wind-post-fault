@@ -1,0 +1,7 @@
+{
+  "turbineName": "Wind Turbine Fault",
+  "capacity": 1500,
+  "currentGeneration": 0,
+  "location": "Coimbatore",
+  "status": "ACTIVE"
+}

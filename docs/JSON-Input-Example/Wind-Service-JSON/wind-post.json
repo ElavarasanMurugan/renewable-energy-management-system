@@ -1,7 +1,7 @@
 {
-  "deviceName": "WT-001",
-  "location": "Chennai",
-  "capacity": 2500.0,
-  "currentGeneration": 1800.0,
+  "turbineName": "Wind Turbine A",
+  "capacity": 1500,
+  "currentGeneration": 900,
+  "location": "Coimbatore",
   "status": "ACTIVE"
 }

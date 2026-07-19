@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d067fb-d1b6-4d99-a3f9-ec2af57d94de" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../solar-service/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../battery-service/target/generated-sources/annotations/com/project/batteryservice/mapper/HistoryEntityToResponseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../battery-service/target/generated-sources/annotations/com/project/batteryservice/mapper/HistoryEntityToResponseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/target/classes/com/project/distributionservice/controller/DistributionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/target/classes/com/project/distributionservice/controller/DistributionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/target/classes/com/project/distributionservice/service/DistributionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/target/classes/com/project/distributionservice/service/DistributionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/target/generated-sources/annotations/com/project/distributionservice/mapper/DistributionEntityToResponseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/target/generated-sources/annotations/com/project/distributionservice/mapper/DistributionEntityToResponseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distribution-service/target/generated-sources/annotations/com/project/distributionservice/mapper/DistributionRequestToEntityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../distribution-service/target/generated-sources/annotations/com/project/distributionservice/mapper/DistributionRequestToEntityImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../solar-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/GenerationEntityFromDtoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/GenerationEntityFromDtoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/GenerationResponseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/GenerationResponseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/SolarDtoEntityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/SolarDtoEntityImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/SolarEntityDtoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/SolarEntityDtoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/SolarToFaultResponseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../solar-service/target/generated-sources/annotations/com/project/solarservice/mapper/SolarToFaultResponseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wind-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../wind-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wind-service/target/classes/com/project/windservice/mapper/WindRequestToEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/../wind-service/target/classes/com/project/windservice/mapper/WindRequestToEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wind-service/target/classes/com/project/windservice/mapper/WindRequestToEntityImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../wind-service/target/classes/com/project/windservice/mapper/WindRequestToEntityImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wind-service/target/generated-sources/annotations/com/project/windservice/mapper/GenerationEntityToResponseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../wind-service/target/generated-sources/annotations/com/project/windservice/mapper/GenerationEntityToResponseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wind-service/target/generated-sources/annotations/com/project/windservice/mapper/GenerationRequestToEntityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../wind-service/target/generated-sources/annotations/com/project/windservice/mapper/GenerationRequestToEntityImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wind-service/target/generated-sources/annotations/com/project/windservice/mapper/WindEntityToResponseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../wind-service/target/generated-sources/annotations/com/project/windservice/mapper/WindEntityToResponseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wind-service/target/generated-sources/annotations/com/project/windservice/mapper/WindRequestToEntityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../wind-service/target/generated-sources/annotations/com/project/windservice/mapper/WindRequestToEntityImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +57,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.ApiGatewayApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "solar-panel-service",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "nodejs_package_manager_path": "npm"
   }

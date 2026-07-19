@@ -1,0 +1,7 @@
+{
+  "batteryName": "Battery Low",
+  "capacity": 5000,
+  "currentCharge": 1000,
+  "location": "Chennai",
+  "status": "ACTIVE"
+}

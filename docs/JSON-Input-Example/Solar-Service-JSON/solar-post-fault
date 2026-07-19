@@ -1,0 +1,7 @@
+{
+  "panel_name": "Solar Panel Fault",
+  "capacity_kw": 1000,
+  "current_generation": 0,
+  "location": "Chennai",
+  "status": "ACTIVE"
+}

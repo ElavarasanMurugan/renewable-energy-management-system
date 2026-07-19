@@ -1,6 +1,7 @@
 {
-  "batteryName": "BAT-001",
-  "capacity": 5000.0,
+  "batteryName": "Battery A",
+  "capacity": 5000,
+  "currentCharge": 3000,
   "location": "Chennai",
   "status": "ACTIVE"
 }

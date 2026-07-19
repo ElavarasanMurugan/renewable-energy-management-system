@@ -1,7 +1,7 @@
 {
-  "panel_name": "SP-001",
+  "panel_name": "Solar Panel A",
+  "capacity_kw": 1000,
+  "current_generation": 600,
   "location": "Chennai",
-  "capacity_kw": 500.0,
-  "current_generation": 420.5,
   "status": "ACTIVE"
 }
