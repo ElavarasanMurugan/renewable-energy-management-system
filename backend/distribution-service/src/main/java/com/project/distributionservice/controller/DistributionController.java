@@ -1,11 +1,14 @@
 package com.project.distributionservice.controller;
 
+import com.project.distributionservice.dto.DailyReportResponse;
 import com.project.distributionservice.dto.DistributionRequest;
 import com.project.distributionservice.dto.DistributionResponse;
+import com.project.distributionservice.dto.FaultReportResponse;
 import com.project.distributionservice.service.DistributionService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -30,5 +33,15 @@ public class DistributionController {
     @GetMapping("/{id}")
     public DistributionResponse getDistributionById(@PathVariable Long id){
         return distributionService.getDistributionById(id);
+    }
+
+    @GetMapping("/reports/daily")
+    public DailyReportResponse getDailyReport(@RequestParam LocalDate date) {
+        return distributionService.getDailyReport(date);
+    }
+
+    @GetMapping("/faults")
+    public FaultReportResponse getFaults() {
+        return distributionService.getFaults();
     }
 }
